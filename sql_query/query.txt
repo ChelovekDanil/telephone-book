@@ -1,0 +1,15 @@
+CREATE TABLE contacts(
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	owner_id INT FOREIGN KEY REFERENCES users(id),
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	num INT NOT NULL
+);
+
+CREATE TABLE users(
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	first_name VARCHAR(50) NOT NULL,
+	last_name VARCHAR(50) NOT NULL,
+	num INT NOT NULL,
+	password VARCHAR(255)
+);
