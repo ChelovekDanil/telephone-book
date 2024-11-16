@@ -10,25 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace telephone_book
 {
     /// <summary>
-    /// Логика взаимодействия для Auth.xaml
+    /// Логика взаимодействия для AuthPage.xaml
     /// </summary>
-    public partial class Auth : Window
+    public partial class AuthPage : Page
     {
-        public Auth()
+        public AuthPage()
         {
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow newWindow = new MainWindow();
-            newWindow.Show();
-            this.Close();
+            frame.Content = new ContactsPage();
         }
     }
 }
