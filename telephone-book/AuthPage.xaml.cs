@@ -27,7 +27,24 @@ namespace telephone_book
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            string username = username_text_box.Text;
+            string password = password_text_box.Text;
+
+            if (!ComparePassword(password))
+            {
+                MessageBox.Show("Не верный пароль");
+                return;
+            }
+
             frame.Content = new ContactsPage();
+        }
+
+        private bool ComparePassword(string password)
+        {
+            if (password == null || password == "") {
+                return false;
+            }
+            return true;
         }
     }
 }
