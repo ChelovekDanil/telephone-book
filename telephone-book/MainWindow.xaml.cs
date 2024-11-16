@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Navigation;
 
 namespace telephone_book
 {
@@ -10,6 +13,7 @@ namespace telephone_book
         public MainWindow()
         {
             InitializeComponent();
+            frame.Content = new AuthPage();
         }
     }
 }

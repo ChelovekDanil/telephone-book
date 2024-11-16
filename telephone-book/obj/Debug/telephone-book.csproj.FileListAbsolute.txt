@@ -2,12 +2,10 @@ E:\telephone-book\telephone-book\telephone-book\bin\Debug\telephone-book.exe.con
 E:\telephone-book\telephone-book\telephone-book\bin\Debug\telephone-book.exe
 E:\telephone-book\telephone-book\telephone-book\bin\Debug\telephone-book.pdb
 E:\telephone-book\telephone-book\telephone-book\obj\Debug\telephone-book.csproj.AssemblyReference.cache
-E:\telephone-book\telephone-book\telephone-book\obj\Debug\auth.g.cs
 E:\telephone-book\telephone-book\telephone-book\obj\Debug\MainWindow.g.cs
 E:\telephone-book\telephone-book\telephone-book\obj\Debug\App.g.cs
 E:\telephone-book\telephone-book\telephone-book\obj\Debug\telephone-book_MarkupCompile.cache
 E:\telephone-book\telephone-book\telephone-book\obj\Debug\telephone-book_MarkupCompile.lref
-E:\telephone-book\telephone-book\telephone-book\obj\Debug\auth.baml
 E:\telephone-book\telephone-book\telephone-book\obj\Debug\MainWindow.baml
 E:\telephone-book\telephone-book\telephone-book\obj\Debug\telephone-book.g.resources
 E:\telephone-book\telephone-book\telephone-book\obj\Debug\telephone_book.Properties.Resources.resources
@@ -15,3 +13,7 @@ E:\telephone-book\telephone-book\telephone-book\obj\Debug\telephone-book.csproj.
 E:\telephone-book\telephone-book\telephone-book\obj\Debug\telephone-book.csproj.CoreCompileInputs.cache
 E:\telephone-book\telephone-book\telephone-book\obj\Debug\telephone-book.exe
 E:\telephone-book\telephone-book\telephone-book\obj\Debug\telephone-book.pdb
+E:\telephone-book\telephone-book\telephone-book\obj\Debug\AuthPage.g.cs
+E:\telephone-book\telephone-book\telephone-book\obj\Debug\ContactsPage.g.cs
+E:\telephone-book\telephone-book\telephone-book\obj\Debug\AuthPage.baml
+E:\telephone-book\telephone-book\telephone-book\obj\Debug\ContactsPage.baml
