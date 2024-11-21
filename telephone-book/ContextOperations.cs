@@ -75,7 +75,15 @@ namespace telephone_book
 
         public bool deleteUser(users user)
         {
-            return false;
+            var dUser = context.users.FirstOrDefault(u => u.login == user.login);
+            if (dUser == null) 
+            {
+                MessageBox.Show("user not founded");
+                return false;
+            }
+            context.users.Remove(dUser);
+            context.SaveChanges();
+            return true;
         }
 
         public users getUserByLogin(string login)

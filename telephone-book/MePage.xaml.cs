@@ -49,7 +49,7 @@ namespace telephone_book
             }
 
             Dictionary<string, int> roles = context.getRolesTableKeyName();
-            users newUser = new users { login = username_text_box.Text, number = number_text_box.Text, role_id = roles[role_combo_box.Text], password =  password_text_box.Text };
+            users newUser = new users { login = username_text_box.Text, number = number_text_box.Text, role_id = roles[role_combo_box.Text], password = password_text_box.Text };
 
             if (!context.updateUser(user.login, newUser)) {
                 MessageBox.Show("error updating data");
@@ -59,6 +59,16 @@ namespace telephone_book
             user = newUser;
             init_component();
             MessageBox.Show("data updated");
+        }
+
+        private void delete_button(object sender, EventArgs e)
+        {
+            MessageBox.Show(user.login);
+            if (!context.deleteUser(user))
+            {
+                return;
+            }
+            frame.Content = new AuthPage();
         }
     }
 }
