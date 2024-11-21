@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("telephone_book_model.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("telephone_book_model.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("telephone_book_context.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("telephone_book_context.tt")]
 
 

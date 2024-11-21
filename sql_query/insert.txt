@@ -1,0 +1,2 @@
+INSERT INTO role(name, access_level)
+VALUES('admin', 1), ('user', 2);

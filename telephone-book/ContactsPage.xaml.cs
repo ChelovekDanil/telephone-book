@@ -20,9 +20,25 @@ namespace telephone_book
     /// </summary>
     public partial class ContactsPage : Page
     {
+        users user;
         public ContactsPage()
         {
             InitializeComponent();
+        }
+        public ContactsPage(users user)
+        {
+            InitializeComponent();
+            this.user = user;
+        }
+
+        private void logout_button(object sender, EventArgs e)
+        {
+            frame.Content = new AuthPage();
+        }
+
+        private void me_button(object sender, EventArgs e)
+        {
+            frame.Content = new MePage(user);
         }
     }
 }

@@ -65,28 +65,35 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="contacts.cs">
-      <DependentUpon>telephone_book_model.tt</DependentUpon>
+      <DependentUpon>telephone_book_context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContextOperations.cs" />
+    <Compile Include="MePage.xaml.cs">
+      <DependentUpon>MePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterPage.xaml.cs">
+      <DependentUpon>RegisterPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="role.cs">
-      <DependentUpon>telephone_book_model.tt</DependentUpon>
+      <DependentUpon>telephone_book_context.tt</DependentUpon>
     </Compile>
-    <Compile Include="telephone_book_model.Context.cs">
+    <Compile Include="telephone_book_context.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>telephone_book_model.Context.tt</DependentUpon>
+      <DependentUpon>telephone_book_context.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="telephone_book_model.cs">
+    <Compile Include="telephone_book_context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>telephone_book_model.tt</DependentUpon>
+      <DependentUpon>telephone_book_context.tt</DependentUpon>
     </Compile>
-    <Compile Include="telephone_book_model.Designer.cs">
+    <Compile Include="telephone_book_context.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>telephone_book_model.edmx</DependentUpon>
+      <DependentUpon>telephone_book_context.edmx</DependentUpon>
     </Compile>
     <Compile Include="users.cs">
-      <DependentUpon>telephone_book_model.tt</DependentUpon>
+      <DependentUpon>telephone_book_context.tt</DependentUpon>
     </Compile>
     <Page Include="AuthPage.xaml">
       <SubType>Designer</SubType>
@@ -114,6 +121,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RegisterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -138,12 +153,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="telephone_book_model.edmx">
+    <EntityDeploy Include="telephone_book_context.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>telephone_book_model.Designer.cs</LastGenOutput>
+      <LastGenOutput>telephone_book_context.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="telephone_book_model.edmx.diagram">
-      <DependentUpon>telephone_book_model.edmx</DependentUpon>
+    <None Include="telephone_book_context.edmx.diagram">
+      <DependentUpon>telephone_book_context.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -153,15 +168,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="telephone_book_model.Context.tt">
+    <Content Include="telephone_book_context.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>telephone_book_model.edmx</DependentUpon>
-      <LastGenOutput>telephone_book_model.Context.cs</LastGenOutput>
+      <DependentUpon>telephone_book_context.edmx</DependentUpon>
+      <LastGenOutput>telephone_book_context.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="telephone_book_model.tt">
+    <Content Include="telephone_book_context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>telephone_book_model.edmx</DependentUpon>
-      <LastGenOutput>telephone_book_model.cs</LastGenOutput>
+      <DependentUpon>telephone_book_context.edmx</DependentUpon>
+      <LastGenOutput>telephone_book_context.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

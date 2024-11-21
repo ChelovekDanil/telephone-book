@@ -13,7 +13,7 @@
           <Property Name="first_name" Type="varchar" MaxLength="255" />
           <Property Name="last_name" Type="varchar" MaxLength="255" />
           <Property Name="number" Type="varchar" MaxLength="255" />
-          <Property Name="user_id" Type="varchar" MaxLength="255" />
+          <Property Name="user_id" Type="int" />
         </EntityType>
         <EntityType Name="role">
           <Key>
@@ -25,26 +25,27 @@
         </EntityType>
         <EntityType Name="users">
           <Key>
-            <PropertyRef Name="login" />
+            <PropertyRef Name="id" />
           </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="login" Type="varchar" MaxLength="255" Nullable="false" />
           <Property Name="number" Type="varchar" MaxLength="15" Nullable="false" />
           <Property Name="role_id" Type="int" Nullable="false" />
           <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
         </EntityType>
-        <Association Name="FK__contacts__user_i__5441852A">
+        <Association Name="FK__contacts__user_i__5EBF139D">
           <End Role="users" Type="Self.users" Multiplicity="0..1" />
           <End Role="contacts" Type="Self.contacts" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="users">
-              <PropertyRef Name="login" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="contacts">
               <PropertyRef Name="user_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__users__role_id__4BAC3F29">
+        <Association Name="FK__users__role_id__59063A47">
           <End Role="role" Type="Self.role" Multiplicity="1" />
           <End Role="users" Type="Self.users" Multiplicity="*" />
           <ReferentialConstraint>
@@ -60,11 +61,11 @@
           <EntitySet Name="contacts" EntityType="Self.contacts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="role" EntityType="Self.role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__contacts__user_i__5441852A" Association="Self.FK__contacts__user_i__5441852A">
+          <AssociationSet Name="FK__contacts__user_i__5EBF139D" Association="Self.FK__contacts__user_i__5EBF139D">
             <End Role="users" EntitySet="users" />
             <End Role="contacts" EntitySet="contacts" />
           </AssociationSet>
-          <AssociationSet Name="FK__users__role_id__4BAC3F29" Association="Self.FK__users__role_id__4BAC3F29">
+          <AssociationSet Name="FK__users__role_id__59063A47" Association="Self.FK__users__role_id__59063A47">
             <End Role="role" EntitySet="role" />
             <End Role="users" EntitySet="users" />
           </AssociationSet>
@@ -82,8 +83,8 @@
           <Property Name="first_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="last_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="number" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="user_id" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <NavigationProperty Name="users" Relationship="Self.FK__contacts__user_i__5441852A" FromRole="contacts" ToRole="users" />
+          <Property Name="user_id" Type="Int32" />
+          <NavigationProperty Name="users" Relationship="Self.FK__contacts__user_i__5EBF139D" FromRole="contacts" ToRole="users" />
         </EntityType>
         <EntityType Name="role">
           <Key>
@@ -92,32 +93,33 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="access_level" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="users" Relationship="Self.FK__users__role_id__4BAC3F29" FromRole="role" ToRole="users" />
+          <NavigationProperty Name="users" Relationship="Self.FK__users__role_id__59063A47" FromRole="role" ToRole="users" />
         </EntityType>
         <EntityType Name="users">
           <Key>
-            <PropertyRef Name="login" />
+            <PropertyRef Name="id" />
           </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="login" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="number" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="role_id" Type="Int32" Nullable="false" />
           <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="contacts" Relationship="Self.FK__contacts__user_i__5441852A" FromRole="users" ToRole="contacts" />
-          <NavigationProperty Name="role" Relationship="Self.FK__users__role_id__4BAC3F29" FromRole="users" ToRole="role" />
+          <NavigationProperty Name="contacts" Relationship="Self.FK__contacts__user_i__5EBF139D" FromRole="users" ToRole="contacts" />
+          <NavigationProperty Name="role" Relationship="Self.FK__users__role_id__59063A47" FromRole="users" ToRole="role" />
         </EntityType>
-        <Association Name="FK__contacts__user_i__5441852A">
+        <Association Name="FK__contacts__user_i__5EBF139D">
           <End Role="users" Type="Self.users" Multiplicity="0..1" />
           <End Role="contacts" Type="Self.contacts" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="users">
-              <PropertyRef Name="login" />
+              <PropertyRef Name="id" />
             </Principal>
             <Dependent Role="contacts">
               <PropertyRef Name="user_id" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__users__role_id__4BAC3F29">
+        <Association Name="FK__users__role_id__59063A47">
           <End Role="role" Type="Self.role" Multiplicity="1" />
           <End Role="users" Type="Self.users" Multiplicity="*" />
           <ReferentialConstraint>
@@ -133,11 +135,11 @@
           <EntitySet Name="contacts" EntityType="Self.contacts" />
           <EntitySet Name="role" EntityType="Self.role" />
           <EntitySet Name="users" EntityType="Self.users" />
-          <AssociationSet Name="FK__contacts__user_i__5441852A" Association="Self.FK__contacts__user_i__5441852A">
+          <AssociationSet Name="FK__contacts__user_i__5EBF139D" Association="Self.FK__contacts__user_i__5EBF139D">
             <End Role="users" EntitySet="users" />
             <End Role="contacts" EntitySet="contacts" />
           </AssociationSet>
-          <AssociationSet Name="FK__users__role_id__4BAC3F29" Association="Self.FK__users__role_id__4BAC3F29">
+          <AssociationSet Name="FK__users__role_id__59063A47" Association="Self.FK__users__role_id__59063A47">
             <End Role="role" EntitySet="role" />
             <End Role="users" EntitySet="users" />
           </AssociationSet>
@@ -171,6 +173,7 @@
           <EntitySetMapping Name="users">
             <EntityTypeMapping TypeName="telephone_bookModel.users">
               <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="login" ColumnName="login" />
                 <ScalarProperty Name="number" ColumnName="number" />
                 <ScalarProperty Name="role_id" ColumnName="role_id" />
