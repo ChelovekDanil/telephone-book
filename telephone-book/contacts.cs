@@ -18,7 +18,7 @@ namespace telephone_book
         public string first_name { get; set; }
         public string last_name { get; set; }
         public string number { get; set; }
-        public string user_id { get; set; }
+        public Nullable<int> user_id { get; set; }
     
         public virtual users users { get; set; }
     }

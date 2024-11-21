@@ -5,7 +5,8 @@ CREATE TABLE role (
 );
 
 CREATE TABLE users (
-	login VARCHAR(255) PRIMARY KEY,
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	login VARCHAR(255) NOT NULL,
 	number VARCHAR(15) NOT NULL,
 	role_id INT FOREIGN KEY REFERENCES role(id) NOT NULL,
 	password VARCHAR(255) NOT NULL
@@ -16,5 +17,5 @@ CREATE TABLE contacts (
 	first_name VARCHAR(255),
 	last_name VARCHAR(255),
 	number VARCHAR(255),
-	user_id VARCHAR(255) FOREIGN KEY REFERENCES users(login)
+	user_id INT FOREIGN KEY REFERENCES users(id)
 );

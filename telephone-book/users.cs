@@ -20,6 +20,7 @@ namespace telephone_book
             this.contacts = new HashSet<contacts>();
         }
     
+        public int id { get; set; }
         public string login { get; set; }
         public string number { get; set; }
         public int role_id { get; set; }

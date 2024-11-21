@@ -38,7 +38,7 @@ namespace telephone_book
 
         private void me_button(object sender, EventArgs e)
         {
-            frame.Content = new MePage();
+            frame.Content = new MePage(user);
         }
     }
 }
