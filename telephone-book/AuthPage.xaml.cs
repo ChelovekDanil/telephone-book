@@ -23,7 +23,7 @@ namespace telephone_book
     /// </summary>
     public partial class AuthPage : Page
     {
-        telephone_bookEntities context = new telephone_bookEntities();
+        ContextOperations context = new ContextOperations();
         public AuthPage()
         {
             InitializeComponent();
@@ -40,7 +40,7 @@ namespace telephone_book
                 return;
             }
 
-            users user = getUser(typedUsername);
+            users user = context.getUserByLogin(typedUsername);
             if (user == null)
             {
                 MessageBox.Show("user not founded");
@@ -53,11 +53,6 @@ namespace telephone_book
             }
             
             frame.Content = new ContactsPage(user);
-        }
-
-        private users getUser(string username)
-        {
-            return context.users.Find(username);
         }
 
         private bool ComparePassword(string typedPassword, string neededPassword)

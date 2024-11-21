@@ -67,6 +67,10 @@
     <Compile Include="contacts.cs">
       <DependentUpon>telephone_book_model.tt</DependentUpon>
     </Compile>
+    <Compile Include="ContextOperations.cs" />
+    <Compile Include="MePage.xaml.cs">
+      <DependentUpon>MePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RegisterPage.xaml.cs">
       <DependentUpon>RegisterPage.xaml</DependentUpon>
     </Compile>
@@ -117,6 +121,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="RegisterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

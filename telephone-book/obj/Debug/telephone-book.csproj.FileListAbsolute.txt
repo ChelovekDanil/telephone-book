@@ -64,3 +64,5 @@ E:\telephone-book\telephone-book\obj\Debug\telephone-book_Content.g.cs
 E:\telephone-book\telephone-book\obj\Debug\telephon.D9447885.Up2Date
 E:\telephone-book\telephone-book\obj\Debug\RegisterPage.g.cs
 E:\telephone-book\telephone-book\obj\Debug\RegisterPage.baml
+E:\telephone-book\telephone-book\obj\Debug\MePage.g.cs
+E:\telephone-book\telephone-book\obj\Debug\MePage.baml

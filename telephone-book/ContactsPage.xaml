@@ -9,6 +9,8 @@
       Title="ContactsPage">
 
     <Grid Background="Blue">
-        <Button Content="Exit" HorizontalAlignment="Left" Margin="1140,0,0,0" VerticalAlignment="Top" Height="45" Width="60" FontSize="28"/>
+        <Button Content="Me" HorizontalAlignment="Stretch" Margin="-1050,010,0,0" VerticalAlignment="Top" Height="45" Width="120" FontSize="28" Click="me_button" />
+        <Button Content="Log out" HorizontalAlignment="Stretch" Margin="1050,010,0,0" VerticalAlignment="Top" Height="45" Width="120" FontSize="28" Click="logout_button" />
+        <Frame Name="frame"></Frame>
     </Grid>
 </Page>
