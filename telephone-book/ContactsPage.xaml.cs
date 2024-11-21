@@ -20,9 +20,11 @@ namespace telephone_book
     /// </summary>
     public partial class ContactsPage : Page
     {
-        public ContactsPage()
+        users user;
+        public ContactsPage(users user)
         {
             InitializeComponent();
+            this.user = user;
         }
     }
 }

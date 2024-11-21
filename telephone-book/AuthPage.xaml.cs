@@ -23,12 +23,13 @@ namespace telephone_book
     /// </summary>
     public partial class AuthPage : Page
     {
+        telephone_bookEntities context = new telephone_bookEntities();
         public AuthPage()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_LogIn(object sender, RoutedEventArgs e)
         {
             string typedUsername = username_text_box.Text;
             string typedPassword = password_text_box.Text;
@@ -40,25 +41,23 @@ namespace telephone_book
             }
 
             users user = getUser(typedUsername);
+            if (user == null)
+            {
+                MessageBox.Show("user not founded");
+                return;
+            }
 
             if (!ComparePassword(typedPassword, user.password)) {
                 MessageBox.Show("wrong password");
                 return;
             }
             
-            frame.Content = new ContactsPage();
+            frame.Content = new ContactsPage(user);
         }
 
         private users getUser(string username)
         {
-            users user;
-
-            using (var context = new telephone_bookEntities())
-            {
-                user = context.users.Find(username);
-            }
-
-            return user;
+            return context.users.Find(username);
         }
 
         private bool ComparePassword(string typedPassword, string neededPassword)
@@ -68,6 +67,11 @@ namespace telephone_book
                 return false;
             }
             return true;
+        }
+
+        private void Button_Register(object sender, RoutedEventArgs e)
+        {
+            frame.Content = new RegisterPage();
         }
     }
 }

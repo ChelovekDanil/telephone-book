@@ -9,6 +9,6 @@
       Title="ContactsPage">
 
     <Grid Background="Blue">
-        
+        <Button Content="Exit" HorizontalAlignment="Left" Margin="1140,0,0,0" VerticalAlignment="Top" Height="45" Width="60" FontSize="28"/>
     </Grid>
 </Page>

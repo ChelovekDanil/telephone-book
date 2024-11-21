@@ -9,14 +9,16 @@
       Title="AuthPage">
 
     <Grid Background="Green">
-        <TextBlock HorizontalAlignment="Center" Margin="0,218,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="400" Height="30" FontSize="20"/>
-        <TextBox Name="username_text_box" HorizontalAlignment="Center" Margin="0,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="40" FontSize="25"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,155,0,0" TextWrapping="Wrap" Text="Username" VerticalAlignment="Top" Width="400" Height="40" FontSize="30"/>
+        <TextBox Name="username_text_box" HorizontalAlignment="Center" Margin="0,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="40" FontSize="25"/>
 
-        <TextBlock HorizontalAlignment="Center" Margin="0,302,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="400" Height="30" FontSize="20"/>
-        <TextBox Name="password_text_box" HorizontalAlignment="Center" Margin="0,332,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="40" FontSize="25"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,250,0,0" TextWrapping="Wrap" Text="Password" VerticalAlignment="Top" Width="400" Height="40" FontSize="30"/>
+        <TextBox Name="password_text_box" HorizontalAlignment="Center" Margin="0,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="40" FontSize="25"/>
 
-        <Button Content="Enter" HorizontalAlignment="Center" Margin="0,406,0,0" VerticalAlignment="Top" Click="Button_Click" Height="50" Width="400" FontSize="30"/>
+        <Button Content="Log in" HorizontalAlignment="Center" Margin="0,350,0,0" VerticalAlignment="Top" Click="Button_LogIn" Height="45" Width="400" FontSize="28"/>
 
+        <Button Content="Register" HorizontalAlignment="Center" Margin="0, 410,0,0" VerticalAlignment="Top" Click="Button_Register" Height="45" Width="400" FontSize="28"/>
+        
         <Frame x:Name="frame"></Frame>
     </Grid>
 </Page>
