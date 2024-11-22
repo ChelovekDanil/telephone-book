@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="Хранилище telephone_bookModelContainer" CdmEntityContainer="telephone_bookEntities">
+  <EntityContainerMapping StorageEntityContainer="Хранилище telephone_book_contextModelContainer" CdmEntityContainer="telephone_book_contextEntities">
     <EntitySetMapping Name="contacts">
-      <EntityTypeMapping TypeName="telephone_bookModel.contacts">
+      <EntityTypeMapping TypeName="telephone_book_contextModel.contacts">
         <MappingFragment StoreEntitySet="contacts">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="first_name" ColumnName="first_name" />
@@ -13,7 +13,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="role">
-      <EntityTypeMapping TypeName="telephone_bookModel.role">
+      <EntityTypeMapping TypeName="telephone_book_contextModel.role">
         <MappingFragment StoreEntitySet="role">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="name" ColumnName="name" />
@@ -22,7 +22,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="users">
-      <EntityTypeMapping TypeName="telephone_bookModel.users">
+      <EntityTypeMapping TypeName="telephone_book_contextModel.users">
         <MappingFragment StoreEntitySet="users">
           <ScalarProperty Name="id" ColumnName="id" />
           <ScalarProperty Name="login" ColumnName="login" />

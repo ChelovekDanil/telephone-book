@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-E:\telephone-book\telephone-book\obj\Debug\
+D:\ISP-43\telephone-book\telephone-book\obj\Debug\
 telephone_book
 none
 false
 DEBUG;TRACE
-E:\telephone-book\telephone-book\App.xaml
-5-440768453
+D:\ISP-43\telephone-book\telephone-book\App.xaml
+6571763343
 2-632321223
-17-334966225
-18-1824264479
-AuthPage.xaml;ContactsPage.xaml;MainWindow.xaml;MePage.xaml;RegisterPage.xaml;
+182122664391
+18-1557373173
+AddContactPage.xaml;AuthPage.xaml;ContactsPage.xaml;MainWindow.xaml;MePage.xaml;RegisterPage.xaml;
 
-False
+True
 

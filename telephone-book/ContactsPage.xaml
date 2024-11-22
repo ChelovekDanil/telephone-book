@@ -11,6 +11,18 @@
     <Grid Background="Blue">
         <Button Content="Me" HorizontalAlignment="Stretch" Margin="-1050,010,0,0" VerticalAlignment="Top" Height="45" Width="120" FontSize="28" Click="me_button" />
         <Button Content="Log out" HorizontalAlignment="Stretch" Margin="1050,010,0,0" VerticalAlignment="Top" Height="45" Width="120" FontSize="28" Click="logout_button" />
+        <TextBlock HorizontalAlignment="Left" Margin="540,10,0,0" TextWrapping="Wrap" Text="Контакты" VerticalAlignment="Top" FontSize="40" Foreground="White"/>
+        <ListView Name="list_view_contacts" Margin="98,92,98,98">
+            <ListView.View>
+                <GridView >
+                    <GridViewColumn Header="id" DisplayMemberBinding="{Binding id}" Width="80"/>
+                    <GridViewColumn Header="first name" DisplayMemberBinding="{Binding first_name}" Width="298"/>
+                    <GridViewColumn Header="last name" DisplayMemberBinding="{Binding last_name}" Width="298"/>
+                    <GridViewColumn Header="number" DisplayMemberBinding="{Binding number}" Width="298"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="add new contact" HorizontalAlignment="Stretch" Margin="0,560,0,0" VerticalAlignment="Stretch" Height="45" Width="400" FontSize="28" Click="add_contact_button"/>
         <Frame Name="frame"></Frame>
     </Grid>
 </Page>

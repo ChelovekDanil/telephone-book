@@ -63,7 +63,6 @@ namespace telephone_book
 
         private void delete_button(object sender, EventArgs e)
         {
-            MessageBox.Show(user.login);
             if (!context.deleteUser(user))
             {
                 return;

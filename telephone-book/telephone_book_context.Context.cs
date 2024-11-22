@@ -13,10 +13,10 @@ namespace telephone_book
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class telephone_bookEntities : DbContext
+    public partial class telephone_book_contextEntities : DbContext
     {
-        public telephone_bookEntities()
-            : base("name=telephone_bookEntities")
+        public telephone_book_contextEntities()
+            : base("name=telephone_book_contextEntities")
         {
         }
     

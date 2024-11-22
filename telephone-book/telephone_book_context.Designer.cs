@@ -1,4 +1,4 @@
-﻿// Создание кода T4 для модели "E:\telephone-book\telephone-book\telephone_book_context.edmx" включено. 
+﻿// Создание кода T4 для модели "D:\ISP-43\telephone-book\telephone-book\telephone_book_context.edmx" включено. 
 // Чтобы включить формирование кода прежних версий, измените значение свойства "Стратегия создания кода" конструктора
 // на "Legacy ObjectContext". Это свойство доступно в окне "Свойства", если модель
 // открыта в конструкторе.

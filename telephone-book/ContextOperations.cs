@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -8,7 +9,7 @@ namespace telephone_book
 {
     public class ContextOperations
     {
-        public telephone_bookEntities context = new telephone_bookEntities();
+        public telephone_book_contextEntities context = new telephone_book_contextEntities();
         public ContextOperations() { }
 
         public List<string> getRolesStrings()
@@ -89,6 +90,16 @@ namespace telephone_book
         public users getUserByLogin(string login)
         {
             return context.users.FirstOrDefault(u => u.login == login);
+        }
+
+        public List<contacts> getContacts(users user)
+        {
+            if (user == null)
+            {
+                MessageBox.Show("user not founded");
+                return null;
+            }
+            return context.contacts.Where(u => u.user_id == user.id).ToList();
         }
     }
 }
