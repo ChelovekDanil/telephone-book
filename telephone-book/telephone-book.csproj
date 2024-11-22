@@ -64,6 +64,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddContactPage.xaml.cs">
+      <DependentUpon>AddContactPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="contacts.cs">
       <DependentUpon>telephone_book_context.tt</DependentUpon>
     </Compile>
@@ -92,9 +95,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>telephone_book_context.edmx</DependentUpon>
     </Compile>
+    <Compile Include="UpdateContactPage.xaml.cs">
+      <DependentUpon>UpdateContactPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="users.cs">
       <DependentUpon>telephone_book_context.tt</DependentUpon>
     </Compile>
+    <Page Include="AddContactPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AuthPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -126,6 +136,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RegisterPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UpdateContactPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

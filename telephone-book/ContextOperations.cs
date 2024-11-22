@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Security.Policy;
 using System.Text;
@@ -89,6 +90,68 @@ namespace telephone_book
         public users getUserByLogin(string login)
         {
             return context.users.FirstOrDefault(u => u.login == login);
+        }
+
+        public List<contacts> getContacts(users user)
+        {
+            if (user == null)
+            {
+                MessageBox.Show("user not founded");
+                return null;
+            }
+            return context.contacts.Where(u => u.user_id == user.id).ToList();
+        }
+
+        public bool createContact(contacts contact)
+        {
+            if (context.users.FirstOrDefault(u => u.id == contact.user_id) == null)
+            {
+                MessageBox.Show("user not founded");
+                return false;
+            }
+            context.contacts.Add(contact);
+            context.SaveChanges();
+            return true;
+        }
+
+        public bool updateContact(contacts contact)
+        {
+            var dContact = context.contacts.FirstOrDefault(c => c.id == contact.id);
+            if (dContact == null)
+            {
+                MessageBox.Show("contact not founded");
+                return false;
+            }
+            dContact.first_name = contact.first_name;
+            dContact.last_name = contact.last_name;
+            dContact.number = contact.number;
+            dContact.user_id = contact.user_id;
+
+            context.SaveChanges();
+
+            return true;
+        }
+
+        public bool deleteContact(contacts contact)
+        {
+            var dContact = context.contacts.FirstOrDefault(c => c.id == contact.id);
+            if (dContact == null)
+            {
+                MessageBox.Show("contact not founded");
+                return false;
+            }
+            context.contacts.Remove(dContact);
+            context.SaveChanges();
+            return true;
+        }
+
+        public bool checkRoot(users user, int accessNeed)
+        {
+            if (context.role.FirstOrDefault(r => r.id == user.role_id).access_level == accessNeed)  
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

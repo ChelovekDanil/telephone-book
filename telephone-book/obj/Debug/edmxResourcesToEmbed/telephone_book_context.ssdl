@@ -28,7 +28,7 @@
     <Property Name="role_id" Type="int" Nullable="false" />
     <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
   </EntityType>
-  <Association Name="FK__contacts__user_i__5EBF139D">
+  <Association Name="FK__contacts__user_i__66603565">
     <End Role="users" Type="Self.users" Multiplicity="0..1" />
     <End Role="contacts" Type="Self.contacts" Multiplicity="*" />
     <ReferentialConstraint>
@@ -40,7 +40,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__users__role_id__59063A47">
+  <Association Name="FK__users__role_id__6383C8BA">
     <End Role="role" Type="Self.role" Multiplicity="1" />
     <End Role="users" Type="Self.users" Multiplicity="*" />
     <ReferentialConstraint>
@@ -56,11 +56,11 @@
     <EntitySet Name="contacts" EntityType="Self.contacts" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="role" EntityType="Self.role" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__contacts__user_i__5EBF139D" Association="Self.FK__contacts__user_i__5EBF139D">
+    <AssociationSet Name="FK__contacts__user_i__66603565" Association="Self.FK__contacts__user_i__66603565">
       <End Role="users" EntitySet="users" />
       <End Role="contacts" EntitySet="contacts" />
     </AssociationSet>
-    <AssociationSet Name="FK__users__role_id__59063A47" Association="Self.FK__users__role_id__59063A47">
+    <AssociationSet Name="FK__users__role_id__6383C8BA" Association="Self.FK__users__role_id__6383C8BA">
       <End Role="role" EntitySet="role" />
       <End Role="users" EntitySet="users" />
     </AssociationSet>
