@@ -56,7 +56,7 @@ namespace telephone_book
                 return;
             }
 
-            contacts newContact = new contacts { id = contact.id, first_name = first_name_text_box.Text, last_name = last_name_text_box.Text, number = number_text_box.Text };
+            contacts newContact = new contacts { id = contact.id, first_name = first_name_text_box.Text, last_name = last_name_text_box.Text, number = number_text_box.Text, user_id = user.id };
 
             if (!context.updateContact(newContact))
             {

@@ -125,6 +125,7 @@ namespace telephone_book
             dContact.first_name = contact.first_name;
             dContact.last_name = contact.last_name;
             dContact.number = contact.number;
+            dContact.user_id = contact.user_id;
 
             context.SaveChanges();
 
@@ -142,6 +143,15 @@ namespace telephone_book
             context.contacts.Remove(dContact);
             context.SaveChanges();
             return true;
+        }
+
+        public bool checkRoot(users user, int accessNeed)
+        {
+            if (context.role.FirstOrDefault(r => r.id == user.role_id).access_level == accessNeed)  
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

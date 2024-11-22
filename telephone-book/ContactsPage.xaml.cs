@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -20,6 +21,7 @@ namespace telephone_book
         public ContactsPage(users user)
         {
             InitializeComponent();
+            Trace.WriteLine($"{user.id}, {user.login}, {user.number}");
             this.user = user;
             init_component();
         }
@@ -54,6 +56,11 @@ namespace telephone_book
 
         private void list_view_double_click(object sender, MouseButtonEventArgs e)
         {
+            if (!context.checkRoot(user, 1))
+            {
+                MessageBox.Show("you needed permisions");
+                return;
+            }
             var selectedItem = list_view_contacts.SelectedItem as contacts;
             if (selectedItem != null) 
             {
