@@ -4,12 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c87c371ef6b0492abe678e92d6ce27a8" Name="Diagram1">
-        <EntityTypeShape EntityType="telephone_book_contextModel.contacts" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="telephone_book_contextModel.role" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="telephone_book_contextModel.users" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <AssociationConnector Association="telephone_book_contextModel.FK__contacts__user_i__3B75D760" ManuallyRouted="false" />
-        <AssociationConnector Association="telephone_book_contextModel.FK__users__role_id__38996AB5" ManuallyRouted="false" />
+      <Diagram DiagramId="928ead114da642a495ef06ce1670a1f5" Name="Diagram1">
+        <EntityTypeShape EntityType="telephone_bookModel.contacts" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="telephone_bookModel.role" Width="1.5" PointX="0.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="telephone_bookModel.users" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="telephone_bookModel.FK__contacts__user_i__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="telephone_bookModel.FK__users__role_id__6383C8BA" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

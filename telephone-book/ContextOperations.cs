@@ -9,7 +9,7 @@ namespace telephone_book
 {
     public class ContextOperations
     {
-        public telephone_book_contextEntities context = new telephone_book_contextEntities();
+        public telephone_bookEntities context = new telephone_bookEntities();
         public ContextOperations() { }
 
         public List<string> getRolesStrings()
@@ -102,14 +102,44 @@ namespace telephone_book
             return context.contacts.Where(u => u.user_id == user.id).ToList();
         }
 
-        public bool createContact(users user, contacts contact)
+        public bool createContact(contacts contact)
         {
-            if (context.users.FirstOrDefault(u => u.id == user.id) == null)
+            if (context.users.FirstOrDefault(u => u.id == contact.user_id) == null)
             {
                 MessageBox.Show("user not founded");
                 return false;
             }
             context.contacts.Add(contact);
+            context.SaveChanges();
+            return true;
+        }
+
+        public bool updateContact(contacts contact)
+        {
+            var dContact = context.contacts.FirstOrDefault(c => c.id == contact.id);
+            if (dContact == null)
+            {
+                MessageBox.Show("contact not founded");
+                return false;
+            }
+            dContact.first_name = contact.first_name;
+            dContact.last_name = contact.last_name;
+            dContact.number = contact.number;
+
+            context.SaveChanges();
+
+            return true;
+        }
+
+        public bool deleteContact(contacts contact)
+        {
+            var dContact = context.contacts.FirstOrDefault(c => c.id == contact.id);
+            if (dContact == null)
+            {
+                MessageBox.Show("contact not founded");
+                return false;
+            }
+            context.contacts.Remove(dContact);
             context.SaveChanges();
             return true;
         }

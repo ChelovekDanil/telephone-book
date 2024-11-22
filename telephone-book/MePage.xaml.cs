@@ -63,11 +63,10 @@ namespace telephone_book
 
         private void delete_button(object sender, EventArgs e)
         {
-            if (!context.deleteUser(user))
+            if (context.deleteUser(user))
             {
-                return;
+                frame.Content = new AuthPage();
             }
-            frame.Content = new AuthPage();
         }
     }
 }

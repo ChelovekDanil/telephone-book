@@ -98,3 +98,7 @@ D:\ISP-43\telephone-book\telephone-book\obj\Debug\telephone-book.exe
 D:\ISP-43\telephone-book\telephone-book\obj\Debug\telephone-book.pdb
 D:\ISP-43\telephone-book\telephone-book\obj\Debug\AddContactPage.g.cs
 D:\ISP-43\telephone-book\telephone-book\obj\Debug\AddContactPage.baml
+E:\telephone-book\telephone-book\obj\Debug\AddContactPage.g.cs
+E:\telephone-book\telephone-book\obj\Debug\AddContactPage.baml
+E:\telephone-book\telephone-book\obj\Debug\UpdateContactPage.g.cs
+E:\telephone-book\telephone-book\obj\Debug\UpdateContactPage.baml

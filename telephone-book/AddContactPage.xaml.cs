@@ -42,7 +42,7 @@ namespace telephone_book
             }
 
             contacts contact = new contacts { first_name = first_name_text_box.Text, last_name = last_name_text_box.Text, number = number_text_box.Text, user_id = user.id };
-            if (!context.createContact(user, contact))
+            if (!context.createContact(contact))
             {
                 return;
             }

@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 
 namespace telephone_book
 {
@@ -34,7 +36,7 @@ namespace telephone_book
                 list_view_contacts.Items.Add(contact);
             }
         }
-
+        
         private void logout_button(object sender, EventArgs e)
         {
             frame.Content = new AuthPage();
@@ -48,6 +50,15 @@ namespace telephone_book
         private void add_contact_button(object sender, EventArgs e)
         {
             frame.Content = new AddContactPage(user);
+        }
+
+        private void list_view_double_click(object sender, MouseButtonEventArgs e)
+        {
+            var selectedItem = list_view_contacts.SelectedItem as contacts;
+            if (selectedItem != null) 
+            {
+                frame.Content = new UpdateContactPage(user, selectedItem);
+            }
         }
     }
 }

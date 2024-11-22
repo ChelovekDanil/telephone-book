@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Хранилище telephone_book_contextModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="Хранилище telephone_bookModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="contacts">
           <Key>
             <PropertyRef Name="id" />
@@ -33,7 +33,7 @@
           <Property Name="role_id" Type="int" Nullable="false" />
           <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
         </EntityType>
-        <Association Name="FK__contacts__user_i__3B75D760">
+        <Association Name="FK__contacts__user_i__66603565">
           <End Role="users" Type="Self.users" Multiplicity="0..1" />
           <End Role="contacts" Type="Self.contacts" Multiplicity="*" />
           <ReferentialConstraint>
@@ -45,7 +45,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__users__role_id__38996AB5">
+        <Association Name="FK__users__role_id__6383C8BA">
           <End Role="role" Type="Self.role" Multiplicity="1" />
           <End Role="users" Type="Self.users" Multiplicity="*" />
           <ReferentialConstraint>
@@ -57,15 +57,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="Хранилище telephone_book_contextModelContainer">
+        <EntityContainer Name="Хранилище telephone_bookModelContainer">
           <EntitySet Name="contacts" EntityType="Self.contacts" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="role" EntityType="Self.role" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__contacts__user_i__3B75D760" Association="Self.FK__contacts__user_i__3B75D760">
+          <AssociationSet Name="FK__contacts__user_i__66603565" Association="Self.FK__contacts__user_i__66603565">
             <End Role="users" EntitySet="users" />
             <End Role="contacts" EntitySet="contacts" />
           </AssociationSet>
-          <AssociationSet Name="FK__users__role_id__38996AB5" Association="Self.FK__users__role_id__38996AB5">
+          <AssociationSet Name="FK__users__role_id__6383C8BA" Association="Self.FK__users__role_id__6383C8BA">
             <End Role="role" EntitySet="role" />
             <End Role="users" EntitySet="users" />
           </AssociationSet>
@@ -74,7 +74,7 @@
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="telephone_book_contextModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="telephone_bookModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="contacts">
           <Key>
             <PropertyRef Name="id" />
@@ -84,7 +84,7 @@
           <Property Name="last_name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="number" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="user_id" Type="Int32" />
-          <NavigationProperty Name="users" Relationship="Self.FK__contacts__user_i__3B75D760" FromRole="contacts" ToRole="users" />
+          <NavigationProperty Name="users" Relationship="Self.FK__contacts__user_i__66603565" FromRole="contacts" ToRole="users" />
         </EntityType>
         <EntityType Name="role">
           <Key>
@@ -93,7 +93,7 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="access_level" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="users" Relationship="Self.FK__users__role_id__38996AB5" FromRole="role" ToRole="users" />
+          <NavigationProperty Name="users" Relationship="Self.FK__users__role_id__6383C8BA" FromRole="role" ToRole="users" />
         </EntityType>
         <EntityType Name="users">
           <Key>
@@ -104,10 +104,10 @@
           <Property Name="number" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="role_id" Type="Int32" Nullable="false" />
           <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
-          <NavigationProperty Name="contacts" Relationship="Self.FK__contacts__user_i__3B75D760" FromRole="users" ToRole="contacts" />
-          <NavigationProperty Name="role" Relationship="Self.FK__users__role_id__38996AB5" FromRole="users" ToRole="role" />
+          <NavigationProperty Name="contacts" Relationship="Self.FK__contacts__user_i__66603565" FromRole="users" ToRole="contacts" />
+          <NavigationProperty Name="role" Relationship="Self.FK__users__role_id__6383C8BA" FromRole="users" ToRole="role" />
         </EntityType>
-        <Association Name="FK__contacts__user_i__3B75D760">
+        <Association Name="FK__contacts__user_i__66603565">
           <End Role="users" Type="Self.users" Multiplicity="0..1" />
           <End Role="contacts" Type="Self.contacts" Multiplicity="*" />
           <ReferentialConstraint>
@@ -119,7 +119,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__users__role_id__38996AB5">
+        <Association Name="FK__users__role_id__6383C8BA">
           <End Role="role" Type="Self.role" Multiplicity="1" />
           <End Role="users" Type="Self.users" Multiplicity="*" />
           <ReferentialConstraint>
@@ -131,15 +131,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="telephone_book_contextEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="telephone_bookEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="contacts" EntityType="Self.contacts" />
           <EntitySet Name="role" EntityType="Self.role" />
           <EntitySet Name="users" EntityType="Self.users" />
-          <AssociationSet Name="FK__contacts__user_i__3B75D760" Association="Self.FK__contacts__user_i__3B75D760">
+          <AssociationSet Name="FK__contacts__user_i__66603565" Association="Self.FK__contacts__user_i__66603565">
             <End Role="users" EntitySet="users" />
             <End Role="contacts" EntitySet="contacts" />
           </AssociationSet>
-          <AssociationSet Name="FK__users__role_id__38996AB5" Association="Self.FK__users__role_id__38996AB5">
+          <AssociationSet Name="FK__users__role_id__6383C8BA" Association="Self.FK__users__role_id__6383C8BA">
             <End Role="role" EntitySet="role" />
             <End Role="users" EntitySet="users" />
           </AssociationSet>
@@ -149,9 +149,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище telephone_book_contextModelContainer" CdmEntityContainer="telephone_book_contextEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище telephone_bookModelContainer" CdmEntityContainer="telephone_bookEntities">
           <EntitySetMapping Name="contacts">
-            <EntityTypeMapping TypeName="telephone_book_contextModel.contacts">
+            <EntityTypeMapping TypeName="telephone_bookModel.contacts">
               <MappingFragment StoreEntitySet="contacts">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="first_name" ColumnName="first_name" />
@@ -162,7 +162,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="role">
-            <EntityTypeMapping TypeName="telephone_book_contextModel.role">
+            <EntityTypeMapping TypeName="telephone_bookModel.role">
               <MappingFragment StoreEntitySet="role">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="name" ColumnName="name" />
@@ -171,7 +171,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="users">
-            <EntityTypeMapping TypeName="telephone_book_contextModel.users">
+            <EntityTypeMapping TypeName="telephone_bookModel.users">
               <MappingFragment StoreEntitySet="users">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="login" ColumnName="login" />

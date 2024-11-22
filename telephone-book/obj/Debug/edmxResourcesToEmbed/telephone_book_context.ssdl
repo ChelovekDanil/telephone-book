@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Хранилище telephone_book_contextModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="Хранилище telephone_bookModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="contacts">
     <Key>
       <PropertyRef Name="id" />
@@ -28,7 +28,7 @@
     <Property Name="role_id" Type="int" Nullable="false" />
     <Property Name="password" Type="varchar" MaxLength="255" Nullable="false" />
   </EntityType>
-  <Association Name="FK__contacts__user_i__3B75D760">
+  <Association Name="FK__contacts__user_i__66603565">
     <End Role="users" Type="Self.users" Multiplicity="0..1" />
     <End Role="contacts" Type="Self.contacts" Multiplicity="*" />
     <ReferentialConstraint>
@@ -40,7 +40,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__users__role_id__38996AB5">
+  <Association Name="FK__users__role_id__6383C8BA">
     <End Role="role" Type="Self.role" Multiplicity="1" />
     <End Role="users" Type="Self.users" Multiplicity="*" />
     <ReferentialConstraint>
@@ -52,15 +52,15 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="Хранилище telephone_book_contextModelContainer">
+  <EntityContainer Name="Хранилище telephone_bookModelContainer">
     <EntitySet Name="contacts" EntityType="Self.contacts" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="role" EntityType="Self.role" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
-    <AssociationSet Name="FK__contacts__user_i__3B75D760" Association="Self.FK__contacts__user_i__3B75D760">
+    <AssociationSet Name="FK__contacts__user_i__66603565" Association="Self.FK__contacts__user_i__66603565">
       <End Role="users" EntitySet="users" />
       <End Role="contacts" EntitySet="contacts" />
     </AssociationSet>
-    <AssociationSet Name="FK__users__role_id__38996AB5" Association="Self.FK__users__role_id__38996AB5">
+    <AssociationSet Name="FK__users__role_id__6383C8BA" Association="Self.FK__users__role_id__6383C8BA">
       <End Role="role" EntitySet="role" />
       <End Role="users" EntitySet="users" />
     </AssociationSet>

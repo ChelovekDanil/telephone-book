@@ -12,7 +12,7 @@
         <Button Content="Me" HorizontalAlignment="Stretch" Margin="-1050,010,0,0" VerticalAlignment="Top" Height="45" Width="120" FontSize="28" Click="me_button" />
         <Button Content="Log out" HorizontalAlignment="Stretch" Margin="1050,010,0,0" VerticalAlignment="Top" Height="45" Width="120" FontSize="28" Click="logout_button" />
         <TextBlock HorizontalAlignment="Left" Margin="540,10,0,0" TextWrapping="Wrap" Text="Контакты" VerticalAlignment="Top" FontSize="40" Foreground="White"/>
-        <ListView Name="list_view_contacts" Margin="98,92,98,98">
+        <ListView Name="list_view_contacts" Margin="98,92,98,98" MouseDoubleClick="list_view_double_click">
             <ListView.View>
                 <GridView >
                     <GridViewColumn Header="id" DisplayMemberBinding="{Binding id}" Width="80"/>
