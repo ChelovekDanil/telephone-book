@@ -101,5 +101,17 @@ namespace telephone_book
             }
             return context.contacts.Where(u => u.user_id == user.id).ToList();
         }
+
+        public bool createContact(users user, contacts contact)
+        {
+            if (context.users.FirstOrDefault(u => u.id == user.id) == null)
+            {
+                MessageBox.Show("user not founded");
+                return false;
+            }
+            context.contacts.Add(contact);
+            context.SaveChanges();
+            return true;
+        }
     }
 }

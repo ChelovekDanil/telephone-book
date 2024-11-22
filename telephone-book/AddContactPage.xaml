@@ -11,16 +11,16 @@
     <Grid Background="Purple">
         <Button Content="Exit" HorizontalAlignment="Stretch" Margin="1050,010,0,0" VerticalAlignment="Top" Height="45" Width="120" FontSize="28" Click="back_button" />
         
-        <TextBlock HorizontalAlignment="Center" Margin="0,180,0,0" TextWrapping="Wrap" Text="first name" VerticalAlignment="Top" Width="400" Height="40" FontSize="30"/>
-        <TextBox Name="first_name_text_box" HorizontalAlignment="Center" Margin="0,225,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="40" FontSize="25"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,150,0,0" TextWrapping="Wrap" Text="first name" VerticalAlignment="Top" Width="400" Height="40" FontSize="30"/>
+        <TextBox Name="first_name_text_box" HorizontalAlignment="Center" Margin="0,195,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="40" FontSize="25"/>
 
-        <TextBlock HorizontalAlignment="Center" Margin="0,270,0,0" TextWrapping="Wrap" Text="last name" VerticalAlignment="Top" Width="400" Height="40" FontSize="30"/>
-        <TextBox Name="last_name_text_box" HorizontalAlignment="Center" Margin="0,315,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="40" FontSize="25"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,240,0,0" TextWrapping="Wrap" Text="last name" VerticalAlignment="Top" Width="400" Height="40" FontSize="30"/>
+        <TextBox Name="last_name_text_box" HorizontalAlignment="Center" Margin="0,285,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="40" FontSize="25"/>
 
-        <TextBlock HorizontalAlignment="Center" Margin="0,360,0,0" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="400" Height="40" FontSize="30"/>
-        <TextBox Name="number_text_box" HorizontalAlignment="Center" Margin="0,405,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="40" FontSize="25"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,330,0,0" TextWrapping="Wrap" Text="Number" VerticalAlignment="Top" Width="400" Height="40" FontSize="30"/>
+        <TextBox Name="number_text_box" HorizontalAlignment="Center" Margin="0,375,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="400" Height="40" FontSize="25"/>
 
-        <Button Content="Create new contact" HorizontalAlignment="Stretch" Margin="0,350,0,0" VerticalAlignment="Stretch" Height="45" Width="400" FontSize="28" Click="create_contact_button"/>
+        <Button Content="Create new contact" HorizontalAlignment="Stretch" Margin="0,300,0,0" VerticalAlignment="Stretch" Height="45" Width="400" FontSize="28" Click="create_contact_button"/>
         <Frame Name="frame"></Frame>
     </Grid>
 </Page>

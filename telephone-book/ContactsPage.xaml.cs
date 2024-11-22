@@ -33,7 +33,6 @@ namespace telephone_book
             {
                 list_view_contacts.Items.Add(contact);
             }
-            frame.Content = new AddContactPage(user);
         }
 
         private void logout_button(object sender, EventArgs e)
@@ -48,7 +47,7 @@ namespace telephone_book
 
         private void add_contact_button(object sender, EventArgs e)
         {
-            //frame.Content = new AddContactPage(user);
+            frame.Content = new AddContactPage(user);
         }
     }
 }

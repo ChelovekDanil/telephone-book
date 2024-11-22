@@ -20,6 +20,7 @@ namespace telephone_book
     /// </summary>
     public partial class AddContactPage : Page
     {
+        ContextOperations context = new ContextOperations();
         users user;
         public AddContactPage()
         {
@@ -34,7 +35,18 @@ namespace telephone_book
 
         private void create_contact_button(object sender, RoutedEventArgs e)
         {
-            return;
+            if (first_name_text_box.Text == "" || last_name_text_box.Text == "" || number_text_box.Text == "")
+            {
+                MessageBox.Show("enter entire fields!");
+                return;
+            }
+
+            contacts contact = new contacts { first_name = first_name_text_box.Text, last_name = last_name_text_box.Text, number = number_text_box.Text, user_id = user.id };
+            if (!context.createContact(user, contact))
+            {
+                return;
+            }
+            MessageBox.Show("added new contact");
         }
 
         private void back_button(object sender, RoutedEventArgs e)
